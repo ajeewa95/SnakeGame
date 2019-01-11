@@ -31,7 +31,6 @@ function Board(containerId, rowsCount, colsCount) {
             html += "</table><div class='preview'></div><div class='score'><p>Game Over</p><p>Your score was <span class='score-value'></span></p></div><button type='button'>Click Here to Start. Use arrow keys to move.</button></div>";
     document.getElementById(containerId).innerHTML = html;
   } ;
-
 //Create Board Code End pt1
 
 this.hidePreview = function () {
@@ -142,6 +141,7 @@ function Snake(board, speed, head) {
       this.cells[0].direction = keywordDirection;
     };
 
+    //When fruit is eaten
     this.grow = function () {
       var newTail = this.tail.prev();
       this.cells.push(newTail);
@@ -159,6 +159,8 @@ function Snake(board, speed, head) {
     };
 }
 
+
+//Adding fruit randomly
 function addFruitToBoard(board, snake) {
   do {
     var row = Math.floor(Math.random() * board.rowsCount);
