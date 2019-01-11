@@ -1,0 +1,93 @@
+body {
+  background-image: url(../images/greensnake.jpg);
+  height: 100%;
+}
+
+.titleDiv {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  width: 17%;
+  color: blue;
+  font-family: arial;
+  font-size: 40px;
+  background-color: #7FFF00;
+
+}
+
+.snake-board {
+    position: relative;
+    display: inline-block;
+    margin-left: 19%;
+    margin-top: 5%;
+}
+
+.snake-board .preview {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3;
+    background-color: gray;
+    padding-top: 10px;
+}
+
+.snake-board .score {
+    font-size: 200%;
+    color: blue;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    display: none;
+}
+
+.snake-board button {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    width: 30%;
+    height: 30%;
+    margin-left: -15%;
+    margin-top: -5%;
+    font-size: 100%;
+    background-color: yellow;
+    border: 1px solid darkgreen;
+    border-radius: 15%;
+}
+
+.snake-board button:hover {
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+.snake-board table {
+    border-collapse: collapse;
+}
+
+.snake-board td {
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+.snake-board .col {
+    background-color: green;
+}
+
+.snake-board .snake {
+    background-color: yellow;
+    z-index: 1;
+}
+
+.snake-board .fruit {
+    background-color: red;
+    /* background-image: url(../images/cherry.jpg);
+    width: 20px;
+    height: 20px; */
+}
